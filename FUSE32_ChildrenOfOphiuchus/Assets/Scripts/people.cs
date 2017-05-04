@@ -46,7 +46,7 @@ public class people : MonoBehaviour
         {
             GameObject player = GameObject.FindWithTag("Player");
             float length = (player.transform.position - this.transform.position).magnitude;
-            if (Input.GetKey(KeyCode.Return) &&length<=recoverlength)
+            if ((Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.JoystickButton0)) && length<=recoverlength)
             {
 
                 time2 += Time.deltaTime;

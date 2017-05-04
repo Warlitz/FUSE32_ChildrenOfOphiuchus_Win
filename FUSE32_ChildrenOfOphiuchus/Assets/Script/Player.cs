@@ -54,7 +54,7 @@ public class Player : MonoBehaviour {
         else
             HitEffect();
 
-        if (Input.GetKey(KeyCode.Return))
+        if (Input.GetKey(KeyCode.Return) || Input.GetKey(KeyCode.JoystickButton0))
         {
             if (!init_recovery_effect)
             {
@@ -71,7 +71,7 @@ public class Player : MonoBehaviour {
 
     void PlayerMove()
     {
-        if ((Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.Space))  && !IsJump)
+        if ((Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton2))  && !IsJump)
         {
             GetComponent<Rigidbody2D>().velocity = Vector2.up * jump_speed;
             IsJump = true;

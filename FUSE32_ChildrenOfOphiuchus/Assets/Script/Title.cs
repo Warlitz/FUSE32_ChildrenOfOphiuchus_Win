@@ -16,7 +16,7 @@ public class Title : MonoBehaviour {
 	void Update () {
 
 
-        if (Input.GetKeyDown(KeyCode.Return))//Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.JoystickButton0))//Input.GetMouseButtonDown(0))
         {
             Application.LoadLevel("Main");
         }
